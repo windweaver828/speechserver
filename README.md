@@ -3,7 +3,7 @@
 
 ### What is this repository for? ###
 
-Template files for various purposes
+A django server to interface with my home automation system and chatbot
 
 ### Contribution guidelines ###
 
