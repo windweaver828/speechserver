@@ -1,0 +1,113 @@
+# Default Gitignore
+#
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.pyo
+*__pycache__*
+ 
+ # Packages #
+ ############
+ # it's better to unpack these files and commit the raw source
+ # git has its own built in compression methods
+ *.7z
+ *.dmg
+ *.gz
+ *.iso
+ *.jar
+ *.rar
+ *.tar
+ *.zip
+
+ # Media #
+ #########
+ # Image, Video, and Audio (binaries) tend to be a bad idea in git
+ *.jpg
+ *.jpeg
+ *.bmp
+ *.ico
+ *.png
+ *.mov
+ *.mkv
+ *.mp4
+ *.avi
+ *.wmv
+ *.mp3
+ *.wav
+ *.aac
+ *.wma
+ *.flac
+ *.ogg
+
+ # Logs and databases #
+ ######################
+ *.log
+ *.sql
+ *.sqlite
+ *.pkl
+
+ # OS generated files #
+ ######################
+ .DS_Store
+ .DS_Store?
+ ._*
+ .Spotlight-V100
+ .Trashes
+ ehthumbs.db
+ Thumbs.db
+
+# Python Gitignore
+#
+# led / optimized / DLL files
+__pycache__/
+*.py[cod]
+# C extensions
+*.so
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+# Translations
+*.mo
+*.pot
+# Django stuff:
+*.log
+# Sphinx documentation
+docs/_build/
+# PyBuilder
+target/
+
