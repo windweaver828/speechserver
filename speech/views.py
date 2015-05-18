@@ -23,14 +23,9 @@ def speech(request, inpsentence):
 
     output = matchCommand(sentence, commands)
     if not output:
-        response = "Recognition Failed " + sentence
+        response = "Recognition Failed"
     else:
-        func, args = output
-        line = "{func}(".format(func=repr(func).split()[1])
-        if args:
-                line += ", ".join(repr(arg) for arg in args)
-        line += ')'
-        output = callCommand(*output)
-        response = "Recognition Success " + line
+        stderr, stdout = callCommand(*output)
+        response = "Recognition Success {} {}".format(stdout, stderr)
 
     return HttpResponse(response)

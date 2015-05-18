@@ -10,13 +10,16 @@ from CommandsDict import CommandsDict
 
 
 def shellcommand(command):
-    subprocess.Popen(command, shell=True)
+    ret = subprocess.Popen(command, stdout=subprocess.PIPE,
+                           stderr=subprocess.PIPE, shell=True)
+    stdout, stderr = ret.communicate()
+    return stdout, stderr
 
 
 def open_url(url):
     import webbrowser
-    browser = webbrowser.get()
-    browser.open_new_tab(url)
+    webbrowser.get().open_new_tab(url)
+
 
 commands = CommandsDict()
 # ------------------------------------------------------- #
